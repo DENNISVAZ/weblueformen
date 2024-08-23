@@ -1,0 +1,85 @@
+:root {
+    --color-default: #06CBE9;
+}
+
+::-webkit-scrollbar{
+    width: 4px;
+    color: var(--color-default);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-default); 
+    border-radius: 4px;
+    width: 4px;
+  }
+  #breaker{
+      background-color: var(--color-default);
+  }
+  .color{
+      color: var(--color-default);
+  }
+  #about-content a{
+      color: var(--color-default);
+  }
+  .cv a button{
+      background: var(--color-default);
+  }
+ /* about */     
+.service-img img{
+    display: inline-block;
+    z-index: 2;
+    position: relative;
+    margin: 20px;
+    border-radius: 30%;
+    padding: 10px;
+    border: var(--color-default);
+    background: var(--color-default);
+    box-shadow: var(--color-default);
+    height:100px;
+    transition: all .8s ease;
+}
+
+.service:hover .service-img img{
+    box-shadow: 0 0 0 400px var(--color-default);
+}
+.html-progress{
+    background: var(--color-default);
+}
+.js-progress{
+    background: var(--color-default);
+}
+.adobe-progress{
+    background: var(--color-default);
+}
+.php-progress{
+    background: var(--color-default);
+}
+.jquery-progress{
+    background: var(--color-default);
+}
+.seo-progress{
+    background: var(--color-default);
+}
+.portfolio-text h2{
+    color: var(--color-default);
+}
+.portfolio-text button{
+    color: var(--color-default);
+    border: 1.5px solid var(--color-default);
+}
+.portfolio-text button::before{
+    background: var(--color-default);
+}
+.portfolio-image img::before{
+    background: var(--color-default);
+}
+.blog-date{
+    background: var(--color-default);
+}
+form button{
+    background: var(--color-default);
+}
+@media all and (max-width: 550px) and (min-width: 5px){
+    .service:hover .service-img img{
+        box-shadow: var(--color-default);
+    }
+}
