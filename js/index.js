@@ -251,24 +251,6 @@ class FormSubmit {
   }
 
   onSubmission(event) {
-	  const form = this;
-            const action = form.action;
-            const formData = new FormData(form);
-            const submitButton = form.querySelector('button[type="submit"]');
-            const loadingDots = document.getElementById('loadingDots');
-            let dotCount = 0;
-            let dotInterval;
-
-            // Desabilita o botão de envio
-            submitButton.disabled = true;
-            submitButton.innerText = 'Enviando'; // Muda o texto do botão para 'Enviando'
-            loadingDots.style.display = 'inline-block'; // Exibe a animação dos pontos
-
-            // Função para atualizar a animação dos pontos
-            dotInterval = setInterval(() => {
-                dotCount = (dotCount + 1) % 4; // Altera de 0 a 3 para controlar o número de pontos
-                loadingDots.innerText = '.'.repeat(dotCount);
-            }, 500); // Intervalo de tempo para adicionar um ponto
     event.preventDefault();
     event.target.disabled = true;
     event.target.innerText = "Enviando...";
