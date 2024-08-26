@@ -1,9 +1,4 @@
-/*!
-  * Item: Willy Wonka Theme
-  * Description: Personal Portfolio Website Template
-  * Author/Developer: Sujal
-  * Version: v1
-  */
+
 @import url('https://fonts.googleapis.com/css?family=Raleway:300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:500&display=swap');
@@ -14,6 +9,10 @@
     font-style: normal;
 }
 
+:root {
+    --color-default: #5BE4FB;
+}
+
 *{
     padding: 0%;
     margin: 0%;
@@ -21,11 +20,11 @@
 }
 ::-webkit-scrollbar{
     width: 4px;
-    color:#06CBE9;
+    color:var(--color-default);
     transition: all .4s ease;
 }
 ::-webkit-scrollbar-thumb {
-    background: #06CBE9; 
+    background: var(--color-default); 
     border-radius: 4px;
     width: 4px;
     transition: all .4s ease;
@@ -112,7 +111,7 @@ body{
 }
 .font-weblue {
   font-family: 'EURO35', sans-serif;
-  font-size: 7vw;
+  font-size: 12vw;
 }
 .font-weblue14 {
   font-family: 'EURO35', sans-serif;
@@ -224,7 +223,6 @@ body{
     z-index: 2;
     cursor: pointer;
     transition: all .4s ease;
-    background-image: url('../images/webluelogo.png'); /* Caminho para a imagem */
 }
 .logo img:hover{
     opacity: 1;
@@ -410,7 +408,7 @@ body{
 #breaker{
     height: 100vh;
     width: 200%;
-    background-color: #06CBE9;
+    background-color: var(--color-default);
     opacity: 1;
     animation: breakeranimate 2s linear;
     display: none;
@@ -430,7 +428,7 @@ body{
     100%{ transform : translateX(100%) }
 }
 .color{
-    color: #06CBE9;
+    color: var(--color-default);
     transition: all .4s ease;
 }
 #about{
@@ -532,7 +530,7 @@ body{
     font-family: aileron;
     font-weight: 400;
     font-size: 35px;
-    color: #06CBE9;
+    color: var(--color-default);
     transition: all .4s ease;
 }
 .cv {
@@ -543,7 +541,7 @@ body{
     border:none;
     padding: 15px 30px;
     color: whitesmoke;
-    background: #06CBE9;
+    background: var(--color-default);
     outline: none;
     font-size:20px;
     font-family: aileron;
@@ -619,14 +617,14 @@ body{
     margin: 20px;
     border-radius: 30%;
     padding: 10px;
-    border: 0px solid #06CBE9;
-    background: #06CBE9;
-    box-shadow:0px 0px 0px 0px #06CBE9 ;
+    border: 0px solid var(--color-default);
+    background: var(--color-default);
+    box-shadow:0px 0px 0px 0px var(--color-default);
     height:100px;
     transition: all .8s ease;
 }
 .service:hover .service-img img{
-    box-shadow:0px 0px 0px 400px #06CBE9 ;
+    box-shadow:0px 0px 0px 400px var(--color-default);
 }
 .service-description{
     font-family: poppins;
@@ -712,7 +710,7 @@ body{
     transition: all .4s ease;
     width:95%;
     border-radius: 10px;
-    background: #06CBE9;
+    background: var(--color-default);
 }
 .js-progress{
     position: absolute;
@@ -726,7 +724,7 @@ body{
     transition: all .4s ease;
     width:90%;
     border-radius: 10px;
-    background: #06CBE9;
+    background: var(--color-default);
 }
 .adobe-progress{
     position: absolute;
@@ -739,7 +737,7 @@ body{
     transition: all .4s ease;
     width:83%;
     border-radius: 10px;
-    background: #06CBE9;
+    background: var(--color-default);
 }
 .php-progress{
     position: absolute;
@@ -751,7 +749,7 @@ body{
     justify-content: center;
     width:85%;
     border-radius: 10px;
-    background: #06CBE9;
+    background: var(--color-default);
     transition: all .4s ease;
 }
 .jquery-progress{
@@ -765,7 +763,7 @@ body{
     transition: all .4s ease;
     width:94%;
     border-radius: 10px;
-    background: #06CBE9;
+    background: var(--color-default);
 }
 .seo-progress{
     position: absolute;
@@ -778,7 +776,7 @@ body{
     width:84%;
     border-radius: 10px;
     transition: all .4s ease;
-    background: #06CBE9;
+    background: var(--color-default);
 }
 .portfolio-header{
     height: auto;
@@ -837,7 +835,7 @@ padding-bottom: 40px;
     font-family: poppins;
     font-weight: 200;
     padding: 20px;
-    color: #06CBE9;
+    color: var(--color-default);
     transition: all .4s ease;
 }
 .portfolio-text p{
@@ -854,11 +852,11 @@ padding-bottom: 40px;
     font-weight: 200;
     padding: 10px 20px;
     background:transparent;
-    color:#06CBE9;
+    color: var(--color-default);
     transition: all .4s ease;
     outline: none;
     margin: 20px;
-    border: 1.5px solid #06CBE9;
+    border: 1.5px solid var(--color-default);
     cursor: pointer;
     overflow: hidden;
     position: relative;
@@ -873,7 +871,7 @@ padding-bottom: 40px;
     top: 0;
     left: 0;
     z-index: 3;
-    background: #06CBE9;
+    background: var(--color-default);
     transition: all .7s ease;
 }
 .portfolio-text button:hover{
@@ -904,7 +902,7 @@ padding-bottom: 40px;
     content: "";
     height: 100%;
     width: 100%;
-    background: #06CBE9;
+    background: var(--color-default);
     opacity: .1;
     top: 0;
     left: 0;
@@ -1005,7 +1003,7 @@ padding-bottom: 40px;
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #06CBE9;
+    background: var(--color-default);
     color: whitesmoke;
     font-size: 18px;
     text-align: center;
@@ -1097,7 +1095,7 @@ padding-bottom: 40px;
 .contact-info{
     width: 40%;
     height: 500px;
-    background: url(../images/contact-back.jpg);
+    background: url(../images/contact-info.png);
     background-position: center;
     background-size: cover;
     border-radius: 16px;
@@ -1188,7 +1186,7 @@ form button{
     font-family: poppins;
     font-size:20px;
     color: whitesmoke;
-    background:#BB0035;
+    background: var(--color-default);
     opacity: .8;
     margin: 20px;
     cursor: pointer;
@@ -1320,7 +1318,7 @@ form button:hover{
     background: #B3D4FC;
 }
 .color-06CBE9{
-    background: #06CBE9;
+    background: var(--color-default);
 }
 .color-4A90E2{
     background: #4A90E2;
@@ -1390,6 +1388,10 @@ For devices with smaller width like mobile phone
         letter-spacing: 2px;
         font-size: 40px;
     }
+    .font-weblue {
+      font-family: 'EURO35', sans-serif;
+      font-size: 25vw;
+    }
     .contact{
         display: none;
     }
@@ -1421,7 +1423,7 @@ For devices with smaller width like mobile phone
     #breaker{
         height: 100vh;
         width: 200%;
-        background-color: #06CBE9;
+        background-color: var(--color-default);
         opacity: 1;
         animation: breakeranimate 2s linear;
         display: none;
@@ -1589,7 +1591,7 @@ For devices with smaller width like mobile phone
                 display: none;
             }
             .service:hover .service-img img{
-                box-shadow:0px 0px 0px 0px #06CBE9 ;
+                box-shadow:0px 0px 0px 0px var(--color-default);
             }
             .portfolio-image img{
                 height: 300px;
@@ -1848,6 +1850,10 @@ for tabs and large phones
         letter-spacing: 2px;
         font-size: 40px;
     }
+    .font-weblue {
+      font-family: 'EURO35', sans-serif;
+      font-size: 17vw;
+    }
     .header-image{
         float: right;
         height: auto;
@@ -1876,7 +1882,7 @@ for tabs and large phones
     #breaker{
         height: 100vh;
         width: 200%;
-        background-color: #06CBE9;
+        background-color: var(--color-default);
         opacity: 1;
         animation: breakeranimate 2s linear;
         display: none;
@@ -2060,7 +2066,7 @@ for tabs and large phones
                 display: none;
             }
             .service:hover .service-img img{
-                box-shadow:0px 0px 0px 0px #06CBE9 ;
+                box-shadow:0px 0px 0px 0px var(--color-default);
             }
             .portfolio-image img{
                 height: 380px;
@@ -2073,7 +2079,7 @@ for tabs and large phones
             }
             #navigation-bar img{
                 height: 80px;
-                position: absolute;
+                position: absolute
                 top: 15%;
                 left: 2.5%;
                 opacity: .8;
@@ -2593,6 +2599,3 @@ for tabs and large phones
   height: 30px;
 }
 
-.img-logo {
-    background-image: url('../images/webluelogo.png'); /* Caminho para a imagem */
-}
