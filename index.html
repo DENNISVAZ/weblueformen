@@ -1,19 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-xxxxxx"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-xxxxxx');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="weblue innovation and technology" />
-	<meta name="keywords" content="blog, business card, creative, creative portfolio, cv theme, online resume, personal, portfolio, professional cv, responsive portfolio, resume, resume theme, vcard" />
-	<meta name="author" content="weblue innovation and tecnology" />
+    <meta name="description" content="weblue produtos inovadores para os cuidados masculinos. Desenvolvido exclusivamente para homens. Weblue innovative products for male care. Developed exclusively for men." />
+    <meta name="keywords" content="weblue, for men, weblue for men, desenvolvido para homens, cuidados pessoais, men's care, produtos de qualidade, quality, tecnology" />
+    <meta name="author" content="weblue innovation and tecnology" />
+
+    <meta property="og:site_name" content="weblue innovation and tecnology">
+    <meta property="og:title" content="weblue innovation and tecnology" />
+    <meta property="og:description" content="weblue produtos inovadores para os cuidados masculinos. Desenvolvido exclusivamente para homens. Weblue innovative products for male care. Developed exclusively for men." />
+    <meta property="og:image" itemprop="image" content="https://www.weblueformen.com.br/images/logo/img-logo-5BE4FB.png">
+    <meta property="og:url" content="https://www.weblueformen.com.br">
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+
+
     <title id="wb-title-site"></title>
   <!--favicon-img--> 
-   <link rel="icon" type="image/png" href="images/favicon.png">
+   <link rel="icon" type="image/png" href="images/icons/favicon.png">
    <!--favicon-img-->
    <!--main css file should not be removed -->
     <link rel="stylesheet" href="css/index.css">
     <!--main css file-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <!--contains all the div-->
@@ -36,8 +63,8 @@
         <!--Navigator-fullscreen-->
         <div id="navigation-content">
             <div class="logo">
-		<a href="index.html"  >
-                <img src="images/webluelogo.png"  alt="logo">
+		<a href="#" id="home-link-nav">
+                <img id="logo_image_nav" src="images/logo/img-logo-5BE4FB.png"  alt="logo">
 		</a>
             </div>
             <div class="navigation-close">
@@ -56,8 +83,8 @@
           <!--Home Page-->
         <!--Menubar-->
         <div id="navigation-bar">
-	    <a href="index.html" data-text="home" class="img-logo">
-                <img src="images/webluelogo.png" alt="logo">
+	    <a href="#" id="home-link-wb" class="img-logo">
+                <img id="logo_image" src="images/logo/img-logo-5BE4FB.png" alt="logo">
 	    </a>
             <div class="menubar">
                 <span class="first-span"></span>
@@ -106,11 +133,11 @@
         <div id="about">
             <div class="color-changer">
             <div class="color-panel">
-                <img src="images/gear.png" alt="">
+                <img src="images/icons/gear.png" alt="">
             </div>
             <div class="color-changer">
                     <div class="color-panel">
-                        <img src="images/gear.png" alt="">
+                        <img src="images/iconsgear.png" alt="">
                     </div>
                     <div class="color-selector"></div>
                 </div>
@@ -150,7 +177,7 @@
             <div id="services">
                 <div class="color-changer">
                     <div class="color-panel">
-                        <img src="images/gear.png" alt="">
+                        <img src="images/icons/gear.png" alt="">
                     </div>
                     <div class="color-selector" id="color-selector-about"></div>
                     </div>
@@ -164,7 +191,7 @@
                     <div class="services-content">
                            <div class="service-one service wow">
                                <div class="service-img">
-                                   <img src="images/tecnology.png" alt="service-one">
+                                   <img src="images/icons/tecnology.png" alt="service-one">
                                </div>
                                <div class="service-description">
                                     <h2 class="txt-justify" id="about-tec-title"></h2>
@@ -173,7 +200,7 @@
                            </div>
                            <div class="service-two service wow">
                                <div class="service-img">
-                                   <img src="images/innovation.png" alt="service-two">
+                                   <img src="images/icons/innovation.png" alt="service-two">
                                </div>
                                <div class="service-description">
                                     <h2 class="txt-justify" id="about-inn-title"></h2>
@@ -182,7 +209,7 @@
                            </div>
                            <div class="service-three service wow">
                             <div class="service-img">
-                               <img src="images/quality.png" alt="service-three">
+                               <img src="images/icons/quality.png" alt="service-three">
                             </div>
                             <div class="service-description">
                                 <h2 class="txt-justify" id="about-qua-title"></h2>
@@ -194,10 +221,7 @@
             <!--services content end-->
             <!--services end-->
     <!--copyright-section You Can Remove After Downloading-->
-            <div class="footer">
-             <div class="footer-text">
-                 <img src="./images/copyright.png" alt="copyright-img" class="images " height="14px"> weblue comercio ltda
-             </div>
+            <div class="footer" id="about-footer">
             </div>
     <!--copyright-section-->
         </div>
@@ -206,7 +230,7 @@
             <div id="portfolio">
                 <div class="color-changer">
                     <div class="color-panel">
-                        <img src="images/gear.png" alt="">
+                        <img src="images/icons/gear.png" alt="">
                     </div>
                     <div class="color-selector">
                        <div id="color-selector-distributors"></div>
@@ -223,7 +247,7 @@
              <div id="portfolio-content">
                  <div class="portfolio portfolio-first">
                      <div class="portfolio-image">
-                        <img src="images/portfolio-first.jpg" alt="portfolio-first">
+                        <img src="images/distribuitors/AM.png" alt="portfolio-first">
                      </div>
                      <div class="portfolio-text">
                          <h2 id="distributors-AM-barber"></h2>
@@ -243,7 +267,7 @@
                  </div>
                  <div class="portfolio portfolio-second">
                     <div class="portfolio-image">
-                        <img src="images/portfolio-second.jpg" alt="portfolio-second">
+                        <img src="images/distribuitors/MG.png" alt="portfolio-second">
                     </div>
                     <div class="portfolio-text">
                          <h2 id="distributors-MG-barber"></h2>
@@ -267,11 +291,8 @@
 
                  </div>
                     <!--copyright-section You Can Remove After Downloading-->
-            <div class="footer">
-                <div class="footer-text">
-                    <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> weblue comercio ltda
-                </div>
-               </div>
+            <div class="footer" id="products-footer">
+            </div>
        <!--copyright-section-->
              </div>
         <!--portfolio end-->
@@ -279,7 +300,7 @@
         <div id="blog">
             <div class="color-changer">
                 <div class="color-panel">
-                    <img src="images/gear.png" alt="">
+                    <img src="images/icons/gear.png" alt="">
                 </div>
                 <div class="color-selector" id="color-selector-products"></div>
                 </div>
@@ -294,7 +315,7 @@
                  <div class="blogs">
                      <a>
                          <div class="img">
-                            <img src="images/post-one.jpg" alt="blog-one">
+                            <img src="images/products/perfumed-oil-150.jpg" alt="blog-one">
                             <div class="blog-date" id="products-PO150-date"></div>
                          </div>
                          <div class="blog-text">
@@ -306,7 +327,7 @@
                  <div class="blogs">
                      <a>
                          <div class="img">
-                            <img src="images/post-one.jpg" alt="blog-one">
+                            <img src="images/products/oil-essence-150.jpg" alt="blog-one">
                             <div class="blog-date" id="products-OE150-date"></div>
                          </div>
                          <div class="blog-text">
@@ -318,7 +339,7 @@
                  <div class="blogs">
                      <a>
                          <div class="img">
-                            <img src="images/post-one.jpg" alt="blog-one">
+                            <img src="images/products/intimate-deodorante-150.jpg" alt="blog-one">
                             <div class="blog-date" id="products-ID150-date"></div>
                          </div>
                          <div class="blog-text">
@@ -330,7 +351,7 @@
                  <div class="blogs">
                      <a>
                          <div class="img">
-                            <img src="images/post-one.jpg" alt="blog-one">
+                            <img src="images/products/hair-care-150.jpg" alt="blog-one">
                             <div class="blog-date" id="products-HC150-date"></div>
                          </div>
                          <div class="blog-text">
@@ -342,7 +363,7 @@
                  <div class="blogs">
                      <a>
                          <div class="img">
-                            <img src="images/post-one.jpg" alt="blog-one">
+                            <img src="images/products/hair-styling-150.jpg" alt="blog-one">
                             <div class="blog-date" id="products-HS150-date"></div>
                          </div>
                          <div class="blog-text">
@@ -354,7 +375,7 @@
                  <div class="blogs">
                      <a>
                          <div class="img">
-                            <img src="images/post-one.jpg" alt="blog-one">
+                            <img src="images/products/new-hair-100.jpg" alt="blog-one">
                             <div class="blog-date" id="products-NH100-date"></div>
                          </div>
                          <div class="blog-text">
@@ -365,11 +386,8 @@
                  </div>        
             </div>
                <!--copyright-section You Can Remove After Downloading-->
-               <div class="footer">
-                <div class="footer-text">
-                    <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> weblue comercio ltda
-                </div>
-               </div>
+            <div class="footer" id="distribuitors-footer">
+            </div>
        <!--copyright-section-->
         </div>
         <!--blog end-->
@@ -377,7 +395,7 @@
      <div id="contact">
         <div class="color-changer">
             <div class="color-panel">
-                <img src="images/gear.png" alt="">
+                <img src="images/icons/gear.png" alt="">
             </div>
             <div class="color-selector" id="color-selector-contact"></div>
             </div>
@@ -394,15 +412,33 @@
              <div class="contact-form">
                  <div class="form-header" id="contact-form-title">
                  </div>
-                 <form id="myForm" action="#">
+                 <form id="myForm" action="https://formsubmit.co/comercial@weblueformen.com.br" method="POST">
                     <div class="input-line">
-                        <input  id="name" type="text" placeholder="Name/Nome" class="input-name">
-                        <input id="email" type="email" placeholder="Email"  class="input-name">
+                        <input  id="name" type="text" name="name" class="input-name">
+                        <input id="email" type="email" name="email"  class="input-name">
                     </div>
-                    <input type="text" id="subject" placeholder="Subject/Assunto" class="input-subject">
-                    <textarea id ="body" class="input-textarea" placeholder="Message/Mensagem"></textarea>
+                    <input type="text" id="subject" name="_subject" class="input-subject">
+                    <textarea id ="body" class="input-textarea" name="message"></textarea>
                     <button type="button" id ="submit" value="send"><span id="contact-form-submit"></span></button>
                  </form>
+                 
+                 <!-- Modal de Confirmação -->
+                    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="successModalLabel">Enviado com Sucesso</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    Sua mensagem foi enviada com sucesso!
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                
              </div>
             <!--Contact form-->
@@ -419,7 +455,7 @@
                   </div>
                 </div>
                 <div class="contect-info-content-line">
-                  <img src="./images/icon-location.png" class="icon" alt="location-icon">
+                  <img src="./images/icons/icon-location.png" class="icon" alt="location-icon">
                   <div class="contact-info-icon-text">
                       <h6 id="contact-info-location"></h6>
                       <p>Lagoa Santa, MG</p>
@@ -434,7 +470,7 @@
               </div>
               
               <div class="contect-info-content-line">
-                  <img src="./images/icon-email.png" class="icon" alt="email-icon">
+                  <img src="./images/icons/icon-email.png" class="icon" alt="email-icon">
                   <div class="contact-info-icon-text">
                       <h6 id="contact-info-email"></h6>
                       <p>comercial@weblueformen.com.br</p>
@@ -445,16 +481,15 @@
            </div>
         </div>
                     <!--copyright-section You Can Remove After Downloading-->
-                    <div class="footer">
-                        <div class="footer-text">
-                            <img src="./images/copyright.png" alt="copyright-img" class="images" height="14px"> weblue comercio ltda
-                        </div>
-                   </div>
+            <div class="footer" id="contact-footer">
+            </div>
                <!--copyright-section-->
      </div>
         <!--contact end-->
     </div>
     <!--all the divisions-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/particles.min.js"></script>
@@ -463,6 +498,23 @@
     <!--particles script-->
     <script>
       particlesJS("particles", {"particles":{"number":{"value":40,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+    </script>
+    
+    <script>
+        // Função para verificar se o modal deve ser exibido
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('submitted')) {
+                var myModal = new bootstrap.Modal(document.getElementById('successModal'));
+                myModal.show();
+            }
+        };
+
+        // Manipulador de evento para o formulário
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            // Após enviar o formulário, adicionar o parâmetro "submitted" à URL
+            this.action += "?submitted=true";
+        });
     </script>
 
 </body>
