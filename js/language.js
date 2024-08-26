@@ -117,7 +117,7 @@ const translations = {
         products_HC150_name: "HAIR CARE 150 ML",
         products_HC150_date: "10.2024",
         products_HC150_description: "Innovation and effectiveness in one product: developed to offer a clinical treatment against dandruff and oily scalp. Provides immediate relief and long-lasting results, keeping the scalp healthy and free from irritation.",
-        products_HS150_name: "HAIR STYLING 15 0ML",
+        products_HS150_name: "HAIR STYLING 150 ML",
         products_HS150_date: "11.2024",
         products_HS150_description: "Offers the hold of a pomade with the convenience of a spray, allowing you to style your hair with precision and flair. Ideal for men seeking an impeccable look that’s easy to maintain, ensuring flexibility and control in every situation.",
         products_NH100_name: "NEW HAIR 100 ML",
@@ -391,46 +391,46 @@ function criarDivFlags() {
     const div = document.createElement("div");
     div.className = "colors";
     div.innerHTML = `
-        <div class="color-selector">
-                        <div class="heading">Custom<hr></div>
-                        <div class="colors">
-                            <ul >
-                            <li>
-                                <a href="#0" class="color-5BE4FB " title="5BE4FB"></a>
-                            </li>
-                            <li>
-                                <a href="#0" class="color-B3D4FC" title="B3D4FC"></a>
-                            </li>
-                            <li>
-                                <a href="#0" class="color-06CBE9" title="06CBE9"></a>
-                            </li>
-                            <li>
-                                <a href="#0" class="color-4A90E2" title="4A90E2"></a>
-                            </li>
-                            <li>
-                                <a href="#0" class="color-035AA6" title="035AA6"></a>
-                            </li>
-                            <li>
-                                <a href="#0" class="color-1E3A8A" title="1E3A8A"></a>
-                            </li>
-                            </ul>
-                        </div>
+                        <div class="color-selector">
+                            <div class="heading">Custom<hr></div>
+                            <div class="colors">
+                                <ul >
+                                <li>
+                                    <a href="#0" class="color-5BE4FB " title="5BE4FB" id="select-5BE4FB"></a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="color-B3D4FC" title="B3D4FC" id="select-B3D4FC"></a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="color-06CBE9" title="06CBE9" id="select-06CBE9"></a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="color-4A90E2" title="4A90E2" id="select-4A90E2"></a>
+                                </li>
+                                <li> 
+                                    <a href="#0" class="color-035AA6" title="035AA6" id="select-035AA6"></a>
+                                </li>
+                                <li>
+                                    <a href="#0" class="color-1E3A8A" title="1E3A8A" id="select-1E3A8A"></a>
+                                </li>
+                                </ul>
+                            </div>
 
-                        <div class="heading">Language<hr></div>
-                        <div class="colors">
-                            <ul>
-                            <li>
-                                <a href="#" onclick="return false"><img class="flags" src="images/flags/brazil.png" id="br-flag" alt="Português"></a>
-                            </li>
-                            <li>
-                                <a href="#" onclick="return false"><img class="flags" src="images/flags/spanish.png" id="es-flag" alt="Português"></a>
-                            </li>
-                            <li>
-                                <a href="#" onclick="return false"><img class="flags" src="images/flags/us.jpg" id="us-flag" alt="Português"></a>
-                            </li>
-                            </ul>
+                            <div class="heading">Language<hr></div>
+                            <div class="colors">
+                                <ul>
+                                <li>
+                                    <a href="#" onclick="return false"><img class="flags" src="images/flags/brazil.png" id="br-flag" alt="Português"></a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="return false"><img class="flags" src="images/flags/spanish.png" id="es-flag" alt="Português"></a>
+                                </li>
+                                <li>
+                                    <a href="#" onclick="return false"><img class="flags" src="images/flags/us.jpg" id="us-flag" alt="Português"></a>
+                                </li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
     `;
     
     
@@ -444,9 +444,48 @@ function criarDivFlags() {
     div.querySelector("#us-flag").addEventListener("click", () => {
         changeLanguage("us");
     });
+    div.querySelector("#select-5BE4FB").addEventListener("click", () => {
+        logo_image.src = "images/logo/img-logo-5BE4FB.png";
+        logo_image_nav.src = "images/logo/img-logo-5BE4FB.png";
+    });
+    div.querySelector("#select-B3D4FC").addEventListener("click", () => {
+        logo_image.src = "images/logo/img-logo-B3D4FC.png";
+        logo_image_nav.src = "images/logo/img-logo-B3D4FC.png";
+    });
+    div.querySelector("#select-06CBE9").addEventListener("click", () => {
+        logo_image.src = "images/logo/img-logo-06CBE9.png";
+        logo_image_nav.src = "images/logo/img-logo-06CBE9.png";
+    });
+    div.querySelector("#select-4A90E2").addEventListener("click", () => {
+        logo_image.src = "images/logo/img-logo-4A90E2.png";
+        logo_image_nav.src = "images/logo/img-logo-4A90E2.png";
+    });
+    div.querySelector("#select-035AA6").addEventListener("click", () => {
+        logo_image.src = "images/logo/img-logo-035AA6.png";
+        logo_image_nav.src = "images/logo/img-logo-035AA6.png";
+    });
+    div.querySelector("#select-1E3A8A").addEventListener("click", () => {
+        logo_image.src = "images/logo/img-logo-1E3A8A.png";
+        logo_image_nav.src = "images/logo/img-logo-1E3A8A.png";
+    });
     return div;
 }
 
+function criarDivfooter() {
+    const div = document.createElement("div");
+    div.className = "colors";
+    div.innerHTML = `
+
+             <div class="footer-text">
+                 <img src="./images/icons/copyright.png" alt="copyright-img" class="images " height="14px"> weblue comercio ltda
+                 
+             </div>
+             <br>CNPJ 55.265.308/0001-50
+
+    `;
+    
+    return div;
+}
 
 
 // Exemplo de uso para inserir o código
@@ -454,3 +493,11 @@ document.getElementById("color-selector-about").appendChild(criarDivFlags());
 document.getElementById("color-selector-products").appendChild(criarDivFlags());
 document.getElementById("color-selector-distributors").appendChild(criarDivFlags());
 document.getElementById("color-selector-contact").appendChild(criarDivFlags());
+
+document.getElementById("about-footer").appendChild(criarDivfooter());
+document.getElementById("products-footer").appendChild(criarDivfooter());
+document.getElementById("distribuitors-footer").appendChild(criarDivfooter());
+document.getElementById("contact-footer").appendChild(criarDivfooter());
+
+
+
