@@ -592,7 +592,6 @@ const formSubmit = new FormSubmit({
   },
   error: function() {
     // Código a ser executado em caso de erro na submissão
-    console.log("Erro ao enviar o formulário.");
   },
 });
 formSubmit.init();
