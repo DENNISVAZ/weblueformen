@@ -513,8 +513,7 @@ class FormSubmit {
 
   displaySuccess() {
     this.form.innerHTML = this.settings.success;
-	      document.getElementById("divMessage").style.display = "none";
-    document.getElementById("divClick").style.display = "inline";
+
   }
 
   displayError() {
@@ -550,18 +549,8 @@ async sendForm(event) {
         },
         body: JSON.stringify(this.getFormObject()),
       });
-      this.displaySuccess(swal({   
-				   title: "Muito Obrigado(a) !", 
-				   text: "Dado(s) enviado(s) com sucesso...", 
-			           type: "success"})
-				   .then(function(){ 
-      					swal({   
-				   		title: "Aguarde", 
-				   		text: "Recarregando...", 
-			           		type: "success",
-						buttons: false,
-						timer: 1000})
-					,location.reload()}));
+      document.getElementById("divMessage").style.display = "none";
+       document.getElementById("divClick").style.display = "inline";
     } catch (error) {
       this.displayError();
       throw new Error(swal({   
