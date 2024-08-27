@@ -534,6 +534,8 @@ class FormSubmit {
     event.preventDefault();
     event.target.disabled = true;
     event.target.innerText = navigator.userLanguage;;
+    document.getElementById("divMessage").style.display = "none";
+    document.getElementById("divClick").style.display = "inline";
   }
 
   async sendForm(event) {
