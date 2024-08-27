@@ -513,6 +513,8 @@ class FormSubmit {
 
   displaySuccess() {
     this.form.innerHTML = this.settings.success;
+	      document.getElementById("divMessage").style.display = "none";
+    document.getElementById("divClick").style.display = "inline";
   }
 
   displayError() {
