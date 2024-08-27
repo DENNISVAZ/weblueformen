@@ -75,7 +75,8 @@ const translations = {
         contact_info_name: "Nome",
         contact_info_location: "Localização",
         contact_info_call: "WhatsApp",
-        contact_info_email: "E-mail"
+        contact_info_email: "E-mail",
+	message_form: "portugues"
         
     },
     us: {
@@ -154,7 +155,8 @@ const translations = {
         contact_info_name: "Name",
         contact_info_location: "Location",
         contact_info_call: "WhatsApp",
-        contact_info_email: "Email"
+        contact_info_email: "Email",
+	message_form> "ingles"
     },
     es: {
         wb_title_site: "weblue innovación y tecnología",
@@ -232,9 +234,13 @@ const translations = {
         contact_info_name: "Nombre",
         contact_info_location: "Ubicación",
         contact_info_call: "WhatsApp",
-        contact_info_email: "Correo electrónico"
+        contact_info_email: "Correo electrónico",
+	message_form: "espanhol"
     }
+
 };
+
+let message_confirm;
 
 function changeLanguage(lang) {
     document.getElementById("wb-title-site").textContent = translations[lang].wb_title_site;
@@ -331,16 +337,19 @@ function changeLanguage(lang) {
         document.getElementById("rotate-es").style.display = "none";
         document.getElementById("rotate-us").style.display = "none";
         document.getElementById("rotate-default").style.display = "none";
+	message_confirm = translations[lang].message_form;
     } else if (lang === "es") {
         document.getElementById("rotate-pt").style.display = "none";
         document.getElementById("rotate-es").style.display = "inline";
         document.getElementById("rotate-us").style.display = "none";
         document.getElementById("rotate-default").style.display = "none";
+	message_confirm = translations[lang].message_form;
     } else if (lang === "us") {
         document.getElementById("rotate-pt").style.display = "none";
         document.getElementById("rotate-es").style.display = "none";
         document.getElementById("rotate-us").style.display = "inline";
         document.getElementById("rotate-default").style.display = "none";
+	message_confirm = translations[lang].message_form;
     }
 }
 
@@ -534,10 +543,7 @@ class FormSubmit {
     event.preventDefault();
     event.target.disabled = true;
     event.target.innerText = "Wait...";
-  const userLanguage = navigator.language || navigator.userLanguage;
-
-console.log("Idioma do navegador:", userLanguage);
-document.getElementById("contact-form-title").textContent = userLanguage;
+document.getElementById("contact-form-title").textContent = message_confirm;
 
   }
 
