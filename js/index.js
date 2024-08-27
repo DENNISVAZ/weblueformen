@@ -250,33 +250,14 @@ class FormSubmit {
     return formObject;
   }
 
-	let intervalId; // Variável para armazenar o ID do intervalo
+
 	
   onSubmission(event) {
+    event.preventDefault();
+    event.target.disabled = true;
+    event.target.innerText = "EnviandoB...";
 
 
-	    event.preventDefault();
-  const button = event.target;
-  button.disabled = true; // Desativa o botão
-  button.innerText = "Enviando"; // Texto inicial do botão
-
-  let dotCount = 0; // Contador para os pontos
-
-  // Função para atualizar o texto do botão
-  function updateButtonText() {
-    dotCount = (dotCount + 1) % 4; // Incrementa o contador e reinicia a cada 4
-    button.innerText = "Enviando" + ".".repeat(dotCount); // Atualiza o texto com os pontos
-  }
-
-  // Inicia o intervalo para atualizar o texto a cada 500ms (meio segundo)
-  intervalId = setInterval(updateButtonText, 500);
-
-  // Simula o envio da mensagem
-  setTimeout(() => {
-    clearInterval(intervalId); // Para o intervalo
-    button.innerText = "Enviado!"; // Altera o texto final para "Enviado!"
-    // Aqui você pode adicionar qualquer lógica adicional após o envio
-}, 5000); // Tempo de simulação de envio de 5 segundos
   }
 
   async sendForm(event) {
