@@ -533,9 +533,7 @@ class FormSubmit {
   onSubmission(event) {
     event.preventDefault();
     event.target.disabled = true;
-    event.target.innerText = navigator.userLanguage;;
-    document.getElementById("divMessage").style.display = "none";
-    document.getElementById("divClick").style.display = "inline";
+    event.target.innerText = "...";
   }
 
   async sendForm(event) {
@@ -587,7 +585,15 @@ class FormSubmit {
 const formSubmit = new FormSubmit({
   form: "[data-form]",
   button: "[data-button]",
-  success: "[data-modal]",
+  success: function() {
+    // Código a ser executado quando a submissão é bem-sucedida
+    document.getElementById("divMessage").style.display = "none";
+    document.getElementById("divClick").style.display = "inline";
+  },
+  error: function() {
+    // Código a ser executado em caso de erro na submissão
+    console.log("Erro ao enviar o formulário.");
+  },
   error: "",
 
 });
