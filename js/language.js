@@ -236,9 +236,6 @@ const translations = {
 
 };
 
-let message_form = "teste";
-let message_button = teste;
-
 function changeLanguage(lang) {
     document.getElementById("wb-title-site").textContent = translations[lang].wb_title_site;
     document.getElementById("wb-txt-loader").textContent = translations[lang].wb_txt_loader;
@@ -334,25 +331,16 @@ function changeLanguage(lang) {
         document.getElementById("rotate-es").style.display = "none";
         document.getElementById("rotate-us").style.display = "none";
         document.getElementById("rotate-default").style.display = "none";
-	message_form = "Portugues";
-	message_button = "Botão Português;
-
     } else if (lang === "es") {
         document.getElementById("rotate-pt").style.display = "none";
         document.getElementById("rotate-es").style.display = "inline";
         document.getElementById("rotate-us").style.display = "none";
         document.getElementById("rotate-default").style.display = "none";
-	message_form = "Espanhol";
-	message_button = "Botão Espanhol;
-
     } else if (lang === "us") {
         document.getElementById("rotate-pt").style.display = "none";
         document.getElementById("rotate-es").style.display = "none";
         document.getElementById("rotate-us").style.display = "inline";
         document.getElementById("rotate-default").style.display = "none";
-	message_form = "Inglês";
-	message_button = "Botão Inglês;
-
     }
 }
 
