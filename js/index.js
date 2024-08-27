@@ -255,7 +255,7 @@ class FormSubmit {
   onSubmission(event) {
     event.preventDefault();
     event.target.disabled = true;
-    event.target.innerText = "EnviandoB...";
+    event.target.innerText = "Wait...";
 
 
   }
