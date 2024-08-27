@@ -236,8 +236,8 @@ const translations = {
 
 };
 
-let message_form;
-let message_button;
+let message_form = "teste";
+let message_button = teste;
 
 function changeLanguage(lang) {
     document.getElementById("wb-title-site").textContent = translations[lang].wb_title_site;
