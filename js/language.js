@@ -75,9 +75,7 @@ const translations = {
         contact_info_name: "Nome",
         contact_info_location: "Localização",
         contact_info_call: "WhatsApp",
-        contact_info_email: "E-mail",
-	message_form: "portugues"
-        
+        contact_info_email: "E-mail"        
     },
     us: {
         wb_title_site: "weblue innovation and technology",
@@ -155,8 +153,7 @@ const translations = {
         contact_info_name: "Name",
         contact_info_location: "Location",
         contact_info_call: "WhatsApp",
-        contact_info_email: "Email",
-	message_form> "ingles"
+        contact_info_email: "Email"
     },
     es: {
         wb_title_site: "weblue innovación y tecnología",
@@ -234,8 +231,7 @@ const translations = {
         contact_info_name: "Nombre",
         contact_info_location: "Ubicación",
         contact_info_call: "WhatsApp",
-        contact_info_email: "Correo electrónico",
-	message_form: "espanhol"
+        contact_info_email: "Correo electrónico"
     }
 
 };
