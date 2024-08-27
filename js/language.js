@@ -236,6 +236,9 @@ const translations = {
 
 };
 
+let message_form;
+let messag_button;
+
 function changeLanguage(lang) {
     document.getElementById("wb-title-site").textContent = translations[lang].wb_title_site;
     document.getElementById("wb-txt-loader").textContent = translations[lang].wb_txt_loader;
