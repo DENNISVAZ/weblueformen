@@ -240,8 +240,6 @@ const translations = {
 
 };
 
-let message_confirm;
-
 function changeLanguage(lang) {
     document.getElementById("wb-title-site").textContent = translations[lang].wb_title_site;
     document.getElementById("wb-txt-loader").textContent = translations[lang].wb_txt_loader;
@@ -543,8 +541,6 @@ class FormSubmit {
     event.preventDefault();
     event.target.disabled = true;
     event.target.innerText = "Wait...";
-document.getElementById("contact-form-title").textContent = message_confirm;
-
   }
 
   async sendForm(event) {
