@@ -253,7 +253,6 @@ class FormSubmit {
 	let intervalId; // Variável para armazenar o ID do intervalo
 	
   onSubmission(event) {
-    event.preventDefault();
 
 
 	    event.preventDefault();
