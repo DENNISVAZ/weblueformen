@@ -421,25 +421,6 @@
                     <textarea id ="body" class="input-textarea" name="message" required></textarea>
                     <button type="submit" id ="submit" value="send" data-button><span id="contact-form-submit"></span></button>
                  </form>
-                 
-                 <!-- Modal de Confirmação -->
-                    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true" data-modal>
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="successModalLabel">Enviado com Sucesso</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Sua mensagem foi enviada com sucesso!
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="submit" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-               
              </div>
             <!--Contact form-->
 	     <div class="contact-form" style="display: none;" id="divClick">
@@ -504,74 +485,5 @@
     <script>
       particlesJS("particles", {"particles":{"number":{"value":40,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
     </script>
-
-	<!-- Script JavaScript -->
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Impede o envio padrão do formulário
-
-            const form = this;
-            const action = form.action;
-            const formData = new FormData(form);
-            const submitButton = document.getElementById('submit');
-
-            // Desativa o botão de envio e inicia a animação de carregamento
-            submitButton.disabled = true;
-            submitButton.classList.add('loading');
-            startLoadingAnimation(submitButton);
-
-            // Envia o formulário usando AJAX
-            fetch(action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    // Exibe o modal de sucesso
-                    var myModal = new bootstrap.Modal(document.getElementById('successModal'));
-                    myModal.show();
-
-                    // Limpa o formulário após envio bem-sucedido
-                    form.reset();
-                } else {
-                    // Lida com erro no envio
-                    alert('Houve um problema ao enviar sua mensagem. Tente novamente.');
-                }
-            })
-            .catch(error => {
-                // Lida com erros de rede
-                console.error('Erro:', error);
-                alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente mais tarde.');
-            })
-            .finally(() => {
-                // Habilita o botão de envio novamente e para a animação
-                submitButton.disabled = false;
-                submitButton.classList.remove('loading');
-                stopLoadingAnimation(submitButton);
-            });
-        });
-
-        // Função para iniciar a animação de carregamento
-        function startLoadingAnimation(button) {
-            let dots = 0;
-            button.originalText = button.textContent; // Salva o texto original do botão
-            button.loadingInterval = setInterval(() => {
-                dots = (dots + 1) % 4; // Alterna entre 0, 1, 2, 3
-                button.textContent = 'EnviandoA' + '.'.repeat(dots);
-            }, 500); // Muda os pontos a cada 500ms
-        }
-
-        // Função para parar a animação de carregamento
-        function stopLoadingAnimation(button) {
-            clearInterval(button.loadingInterval); // Para o intervalo
-            button.textContent = button.originalText; // Restaura o texto original
-        }
-    </script>
-
-
 </body>
 </html>
