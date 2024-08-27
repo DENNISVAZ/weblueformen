@@ -254,6 +254,12 @@ class FormSubmit {
     event.preventDefault();
     event.target.disabled = true;
     event.target.innerText = "EnviandoB...";
+	  let dots = 0;
+            button.originalText = button.textContent; // Salva o texto original do botão
+            button.loadingInterval = setInterval(() => {
+                dots = (dots + 1) % 4; // Alterna entre 0, 1, 2, 3
+                button.textContent = 'EnviandoA' + '.'.repeat(dots);
+            }, 500); // Muda os pontos a cada 500ms
   }
 
   async sendForm(event) {
