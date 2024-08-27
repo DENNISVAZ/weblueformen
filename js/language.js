@@ -337,19 +337,19 @@ function changeLanguage(lang) {
         document.getElementById("rotate-es").style.display = "none";
         document.getElementById("rotate-us").style.display = "none";
         document.getElementById("rotate-default").style.display = "none";
-	message_confirm = translations[lang].message_form;
+
     } else if (lang === "es") {
         document.getElementById("rotate-pt").style.display = "none";
         document.getElementById("rotate-es").style.display = "inline";
         document.getElementById("rotate-us").style.display = "none";
         document.getElementById("rotate-default").style.display = "none";
-	message_confirm = translations[lang].message_form;
+
     } else if (lang === "us") {
         document.getElementById("rotate-pt").style.display = "none";
         document.getElementById("rotate-es").style.display = "none";
         document.getElementById("rotate-us").style.display = "inline";
         document.getElementById("rotate-default").style.display = "none";
-	message_confirm = translations[lang].message_form;
+
     }
 }
 
