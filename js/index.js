@@ -253,7 +253,7 @@ class FormSubmit {
   onSubmission(event) {
     event.preventDefault();
     event.target.disabled = true;
-    event.target.innerText = "Enviando...";
+    event.target.innerText = "EnviandoB...";
   }
 
   async sendForm(event) {
