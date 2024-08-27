@@ -536,46 +536,6 @@ class FormSubmit {
     event.target.innerText = "...";
   }
 
-  async sendForm(event) {
-    try {
-      this.onSubmission(event);
-      await fetch(this.url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify(this.getFormObject()),
-      });
-      this.displaySuccess(swal({   
-				   title: "Muito Obrigado(a) !", 
-				   text: "Dado(s) enviado(s) com sucesso...", 
-			           type: "success"})
-				   .then(function(){ 
-      					swal({   
-				   		title: "Aguarde", 
-				   		text: "Recarregando...", 
-			           		type: "success",
-						buttons: false,
-						timer: 1000})
-					,location.reload()}));
-    } catch (error) {
-      this.displayError();
-      throw new Error(swal({   
-				   title: "Desculpe...", 
-				   text: "Ocorreu um erro durante o envio... Favor enviar novamente....", 
-			           type: "error"})
-				   .then(function(){ 
-					swal({   
-				   		title: "Aguarde", 
-				   		text: "Recarregando...", 
-			           		type: "error",
-						buttons: false,
-						timer: 1000})
-					,location.reload()}));
-    }
-  }
-
   init() {
     if (this.form) this.formButton.addEventListener("click", this.sendForm);
     return this;
