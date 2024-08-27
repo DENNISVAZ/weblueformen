@@ -594,7 +594,5 @@ const formSubmit = new FormSubmit({
     // Código a ser executado em caso de erro na submissão
     console.log("Erro ao enviar o formulário.");
   },
-  error: "",
-
 });
 formSubmit.init();
