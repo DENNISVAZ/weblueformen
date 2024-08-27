@@ -552,19 +552,8 @@ async sendForm(event) {
       document.getElementById("divMessage").style.display = "none";
        document.getElementById("divClick").style.display = "inline";
     } catch (error) {
-      this.displayError();
-      throw new Error(swal({   
-				   title: "Desculpe...", 
-				   text: "Ocorreu um erro durante o envio... Favor enviar novamente....", 
-			           type: "error"})
-				   .then(function(){ 
-					swal({   
-				   		title: "Aguarde", 
-				   		text: "Recarregando...", 
-			           		type: "error",
-						buttons: false,
-						timer: 1000})
-					,location.reload()}));
+      document.getElementById("divMessage").style.display = "none";
+       document.getElementById("divClick").style.display = "inline";
     }
   }
   init() {
