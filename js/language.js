@@ -312,12 +312,12 @@ function changeLanguage(lang) {
     document.getElementById("distributors-AM-city").textContent = translations[lang].distributors_AM_city;
     document.getElementById("distributors-AM-phone").textContent = translations[lang].distributors_AM_phone;
     document.getElementById("distributors-AM-email").textContent = translations[lang].distributors_AM_email;
-    document.getElementById("distributors-MG-barber").textContent = translations[lang].distributors_AM_barber;
-    document.getElementById("distributors-MG").textContent = translations[lang].distributors_AM;
-    document.getElementById("distributors-MG-address").textContent = translations[lang].distributors_AM_address;
-    document.getElementById("distributors-MG-city").textContent = translations[lang].distributors_AM_city;
-    document.getElementById("distributors-MG-phone").textContent = translations[lang].distributors_AM_phone;
-    document.getElementById("distributors-MG-email").textContent = translations[lang].distributors_AM_email;
+    document.getElementById("distributors-MG-barber").textContent = translations[lang].distributors_MG_barber;
+    document.getElementById("distributors-MG").textContent = translations[lang].distributors_MG;
+    document.getElementById("distributors-MG-address").textContent = translations[lang].distributors_MG_address;
+    document.getElementById("distributors-MG-city").textContent = translations[lang].distributors_MG_city;
+    document.getElementById("distributors-MG-phone").textContent = translations[lang].distributors_MG_phone;
+    document.getElementById("distributors-MG-email").textContent = translations[lang].distributors_MG_email;
     
     
     
