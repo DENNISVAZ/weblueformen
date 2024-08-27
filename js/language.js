@@ -534,7 +534,10 @@ class FormSubmit {
     event.preventDefault();
     event.target.disabled = true;
     event.target.innerText = "Wait...";
-document.getElementById("contact-form-title").textContent = navigator.Language;;
+  const userLanguage = navigator.language || navigator.userLanguage;
+
+console.log("Idioma do navegador:", userLanguage);
+document.getElementById("contact-form-title").textContent = userLanguage;
 
   }
 
