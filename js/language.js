@@ -541,11 +541,7 @@ class FormSubmit {
 	
 async sendForm(event) {
 
-  }
-  init() {
-    if (this.form) this.formButton.addEventListener("click", this.sendForm);
-    return this;
-  }
+	    
 }
 
 const formSubmit = new FormSubmit({
