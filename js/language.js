@@ -592,6 +592,8 @@ const formSubmit = new FormSubmit({
   },
   error: function() {
     // Código a ser executado em caso de erro na submissão
+    document.getElementById("divMessage").style.display = "none";
+    document.getElementById("divClick").style.display = "inline";
   },
 });
 formSubmit.init();
