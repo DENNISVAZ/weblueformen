@@ -540,7 +540,28 @@ class FormSubmit {
 
 	
 async sendForm(event) {
+try {
+      this.onSubmission(event);
+      await fetch(this.url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(this.getFormObject()),
+      });
+      document.getElementById("divMessage").style.display = "none";
+      document.getElementById("divClick").style.display = "inline";
+    } catch (error) {
+      document.getElementById("divMessage").style.display = "none";
+      document.getElementById("divClick").style.display = "inline";
+    }
 
+  }
+  init() {
+    if (this.form) this.formButton.addEventListener("click", this.sendForm);
+    return this;
+  }
 	    
 }
 
