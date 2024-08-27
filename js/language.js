@@ -533,7 +533,7 @@ class FormSubmit {
   onSubmission(event) {
     event.preventDefault();
     event.target.disabled = true;
-    event.target.innerText = navigator.language || navigator.userLanguage;;
+    event.target.innerText = navigator.userLanguage;;
   }
 
   async sendForm(event) {
