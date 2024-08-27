@@ -256,7 +256,7 @@ class FormSubmit {
     event.preventDefault();
     event.target.disabled = true;
     event.target.innerText = "Wait...";
-document.getElementById("contact-form-title").textContent = "teste de troca de mensagem";
+document.getElementById("contact-form-title").textContent = translations[lang].contact_form_title;
 
   }
 
