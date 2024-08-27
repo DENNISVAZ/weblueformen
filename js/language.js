@@ -71,6 +71,7 @@ const translations = {
         contact_form_subject: "Assunto",
         contact_form_message: "Mensagem",
         contact_form_submit: "Enviar",
+	contact_form_success: "Obrigado pela Mensagem. Entraremos em contato em breve.",    
         contact_info_title: "Informações de Contato",
         contact_info_name: "Nome",
         contact_info_location: "Localização",
@@ -149,6 +150,7 @@ const translations = {
         contact_form_subject: "Subject",
         contact_form_message: "Message",
         contact_form_submit: "Send",
+	contact_form_success: "Thank you for the Message. We will be in touch soon.",
         contact_info_title: "Contact Information",
         contact_info_name: "Name",
         contact_info_location: "Location",
@@ -227,6 +229,7 @@ const translations = {
         contact_form_subject: "Asunto",
         contact_form_message: "Mensaje",
         contact_form_submit: "Enviar",
+	contact_form_success: "Gracias por el mensaje. Estaremos en contacto pronto.",
         contact_info_title: "Información de Contacto",
         contact_info_name: "Nombre",
         contact_info_location: "Ubicación",
@@ -293,6 +296,7 @@ function changeLanguage(lang) {
     document.getElementById("subject").placeholder = translations[lang].contact_form_subject;
     document.getElementById("body").placeholder = translations[lang].contact_form_message;
     document.getElementById("contact-form-submit").textContent = translations[lang].contact_form_submit;
+    document.getElementById("contact-form-success").textContent = translations[lang].contact_form_success;
     document.getElementById("contact-info-title").textContent = translations[lang].contact_info_title;
     document.getElementById("contact-info-name").textContent = translations[lang].contact_info_name;
     document.getElementById("contact-info-location").textContent = translations[lang].contact_info_location;
