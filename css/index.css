@@ -1265,15 +1265,16 @@ form button:hover{
     z-index: 4;
     color:black;
     transition:all .4s ease;
+    
 }
 .color-changer-active{
-    right:0px;
-    transition:all .4s ease;
+    right: 0px;
+    transition: all .4s ease;
 }
 .color-panel{
-    height: 45px;
+    height: 50px;
     cursor: pointer; 
-    width:45px;
+    width:50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1282,10 +1283,12 @@ form button:hover{
     background: whitesmoke;
 }
 .color-panel img{
-    height: 40px; 
-    width:40px;
-    padding:2px;
+    height: 30px; 
+    width: 30px;
+    padding:0px;
     animation: rotate 2s linear infinite;
+    
+    
 }
 .colors ul{
     display: flex;
@@ -1294,7 +1297,9 @@ form button:hover{
     max-width: 150px;
     text-align: center;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 0px;
+    padding-left: 0;
+
 }
 .colors li{
     height: 30px;
